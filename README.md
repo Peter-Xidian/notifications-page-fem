@@ -65,12 +65,12 @@ Learnt how to loop through elements
 
 ### Continued development
 
-- To include the option of a drop down onclick on each notification card
+- Implement a drop-down message box onclick of each notification card
 - To implement a popup modal on click of profile picture or picture commented on
 
 ### Useful resources
 
-- [CSS Scan](https://getcssscan.com/css-box-shadow-examples) - This helped me by providing me with ready-made drop-shadow options to pick from.
+- [CSS Scan](https://getcssscan.com/css-box-shadow-examples) - This helped me by providing ready-made drop-shadow options to pick from.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle) - This is an amazing resource which helped me understand how to toggle displays. I'd recommend it to anyone still learning this concept.
 - [Animation Library - AOS](https://michalsnik.github.io/aos/) - Great resource that helped with bringing this project to life with some subtle smooth animations.
 
