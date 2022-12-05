@@ -453,7 +453,7 @@ main {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
   .notifications {
     width: 30%;
     justify-content: center;

@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://qr-code-component.github.io/)
-- Live Site URL: [Live Site URL](https://qr-code-component.github.io/)
+- Solution URL: [Solution URL](https://notification-component.netlify.app/)
+- Live Site URL: [Live Site URL](https://notification-component.netlify.app/)
 
 ## My process
 
