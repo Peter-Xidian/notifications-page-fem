@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://notification-component.netlify.app/)
+- Solution URL: [Solution URL](https://github.com/Peter-Xidian/notifications-page-fem)
 - Live Site URL: [Live Site URL](https://notification-component.netlify.app/)
 
 ## My process
