@@ -53,16 +53,25 @@ Learnt how to toggle display
 function toggleNotifText() {
   document.querySelector(".nm-cc__message").classList.toggle("show-message");
 }
+
+Learnt how to loop through elements
+  for (let i = 0; i < 3; i++) {
+    let nmCard = nmCards[i];
+    nmCard.classList.toggle("unread");
+    let nIcon = nIcons[i];
+    nIcon.classList.toggle("hide-notif-icon");
+  }
 ```
 
 ### Continued development
 
-To include a drop down on each
+To include the option of a drop down onclick on each notification card
+To implement a popup modal on click of profile picture or picture commented on
 
 ### Useful resources
 
 - [CSS Scan](https://getcssscan.com/css-box-shadow-examples) - This helped me by providing me with ready-made drop-shadow options to pick from.
-- [W3Schools](https://www.w3schools.com/jsref/met_win_open.asp) - This is an amazing resource which helped me understand how to toggle displays. I'd recommend it to anyone still learning this concept.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle) - This is an amazing resource which helped me understand how to toggle displays. I'd recommend it to anyone still learning this concept.
 - [AOS](https://michalsnik.github.io/aos/) - Great resource that helped with bringing this project to life with some subtle smooth animations.
 
 ## Author

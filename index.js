@@ -16,9 +16,6 @@ function toggleUnread() {
   for (let i = 0; i < 3; i++) {
     let nmCard = nmCards[i];
     nmCard.classList.toggle("unread");
-  }
-
-  for (let i = 0; i < 3; i++) {
     let nIcon = nIcons[i];
     nIcon.classList.toggle("hide-notif-icon");
   }
