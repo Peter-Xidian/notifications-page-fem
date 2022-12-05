@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>
+      Notifications page challenge on Frontend Mentor || By Mayowa Odebode
+    </title>
+
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ===== AOS JS=====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <main>
@@ -14,35 +26,143 @@
         <div class="notifs-header">
           <h1>
             Notifications
-            <span class="notifs-number">3</span>
+            <span class="notifs-number" id="notifs-number">3</span>
           </h1>
 
-          <p>Mark all as read</p>
+          <p class="mark-toggle" onclick="toggleUnread()">Mark all as read</p>
         </div>
 
         <div class="notifs-messages">
-          <div class="nm-card">
+          <div class="nm-card" data-aos="fade-up">
             <div class="nm-card__img">
-              <img src="" alt="" />
+              <img src="images/avatar-mark-webber.webp" alt="" />
             </div>
 
             <div class="nm-card__content">
               <p>
-                <a href="">Mark Webber</a> reacted to your recent post
-                <a href="">My first tournament today!</a>
+                <a href="" class="nmcc">Mark Webber</a> reacted to your recent
+                post
+                <a href="" class="nmcc">My first tournament today!</a>
+                <i class="bx bxs-circle notif-icon"></i>
               </p>
               <span>1m ago</span>
-              <div class="nm-cc__message">
+            </div>
+          </div>
+
+          <div class="nm-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="nm-card__img">
+              <img src="images/avatar-angela-gray.webp" alt="" />
+            </div>
+
+            <div class="nm-card__content">
+              <p>
+                <a href="" class="nmcc">Angela Gray</a> followed you
+                <i class="bx bxs-circle notif-icon"></i>
+              </p>
+              <span>5m ago</span>
+            </div>
+          </div>
+
+          <div class="nm-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="nm-card__img">
+              <img src="images/avatar-jacob-thompson.webp" alt="" />
+            </div>
+
+            <div class="nm-card__content">
+              <p>
+                <a href="" class="nmcc">Jacob Thompson</a> has joined your group
+                <a href="" class="nmcc">Chess Club</a>
+                <i class="bx bxs-circle notif-icon"></i>
+              </p>
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <div
+            class="nm-card"
+            onclick="toggleNotifText()"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="nm-card__img">
+              <img src="images/avatar-rizky-hasanuddin.webp" alt="" />
+            </div>
+
+            <div class="nm-card__content">
+              <p>
+                <a href="" class="nmcc">Rizky Hasanuddin</a> sent you a private
+                message
+              </p>
+              <span>5 days ago</span>
+              <div
+                class="nm-cc__message"
+                data-aos="fade-left"
+                data-aos-delay="550"
+              >
                 <p>
-                  Hello, thanks for seeting up the Chess Club. I've been a
+                  Hello, thanks for setting up the Chess Club. I've been a
                   member for a few weeks now and I'm already having lots of fun
                   and improving my game. <span class="notif-new"></span>
                 </p>
               </div>
             </div>
           </div>
+
+          <div class="nm-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="nm-card__img">
+              <img src="images/avatar-mark-webber.webp" alt="" />
+            </div>
+
+            <div class="nm-card__content">
+              <p>
+                <a href="" class="nmcc">Kimberly Smith</a> commented on your
+                picture
+              </p>
+              <span>1 week ago</span>
+              <img src="images/image-chess.webp" alt="" class="nmcc-img" />
+            </div>
+          </div>
+
+          <div class="nm-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="nm-card__img">
+              <img src="images/avatar-nathan-peterson.webp" alt="" />
+            </div>
+
+            <div class="nm-card__content">
+              <p>
+                <a href="" class="nmcc">Nathan Peterson</a> reacted to your
+                recent post
+                <a href="" class="nmcc"
+                  >5 end-game strategies to increase your win rate</a
+                >
+              </p>
+              <span>2 weeks ago</span>
+            </div>
+          </div>
+
+          <div class="nm-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="nm-card__img">
+              <img src="images/avatar-anna-kim.webp" alt="" />
+            </div>
+
+            <div class="nm-card__content">
+              <p>
+                <a href="" class="nmcc">Anna Kim</a> left the group
+                <a href="" class="nmcc">Chess Club</a>
+              </p>
+              <span>2 weeks ago</span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+    <script src="index.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+      });
+
+      window.addEventListener("load", AOS.refresh);
+    </script>
   </body>
 </html>

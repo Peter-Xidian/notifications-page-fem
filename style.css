@@ -7,6 +7,8 @@
   --soft-white: #fbfaf5;
   --soft-black: #181a18;
   --white: hsl(0, 0%, 100%);
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
   --very-light-grayish-blue: hsl(210, 60%, 98%);
   --light-grayish-blue-1: hsl(211, 68%, 94%);
   --light-grayish-blue-2: hsl(205, 33%, 90%);
@@ -88,6 +90,8 @@ dl,
 dd {
   margin: 0;
   font-size: var(--fs-1);
+  letter-spacing: -0.01em;
+  word-spacing: 0.4px;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -106,6 +110,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: var(--body-font);
 }
 
 /* A elements that don't have a class get default styles */
@@ -151,15 +156,15 @@ main {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
   background-color: var(--very-light-grayish-blue);
-  padding: var(--mb-3-5) 0;
+  padding: var(--mb-1-5) 0;
 }
 
 .notifications {
-  width: 41.5%;
-  height: 100%;
+  width: 42%;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -168,6 +173,7 @@ main {
   padding: var(--mb-1-5);
   background-color: var(--white);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
 }
 
 .notifs-header {
@@ -196,26 +202,186 @@ main {
   height: auto;
   padding: 0.1rem 0.6rem;
   border-radius: 0.3rem;
-  background-color: var(--very-dark-blue);
+  background-color: var(--blue);
   color: var(--white);
   font-size: 0.75rem;
 }
 
 .notifs-header p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-family: var(--body-font);
   text-align: right;
   color: var(--dark-grayish-blue);
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.notfis-messages {
+.notifs-header p:hover {
+  color: var(--blue);
+}
+
+.notifs-messages {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: ;
+  row-gap: 0.4rem;
+}
+
+.nm-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: var(--mb-0-75);
+  /* border: 1px dodgerblue solid; */
+  padding: 0.8rem 0.75rem;
+  /* background-color: var(--very-light-grayish-blue); */
+  background-color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.unread {
+  background-color: var(--white) !important;
+}
+
+.nm-card:nth-child(-n + 3) {
+  background-color: var(--very-light-grayish-blue);
+}
+
+/* .nm-card > div {
+  border: 1px tomato solid;
+} */
+
+.nm-card__img {
+  flex: 0 0 9%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nm-card__img img {
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+.nm-card__content {
+  flex: 0 0 89%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  /* row-gap: 0.15rem; */
+}
+
+.nm-card__content p {
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+  text-align: left;
+  font-weight: 500;
+  /* letter-spacing: -0.03em; */
+}
+
+.nmcc {
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  transition: all 0.3s ease;
+  padding-right: 0.15rem;
+}
+
+.nmcc:first-child {
+  color: var(--very-dark-blue);
+}
+
+.nmcc:first-child:hover {
+  color: var(--blue);
+}
+
+.notif-icon {
+  font-size: 0.525rem;
+  color: var(--red);
+  /* display: inline-block; */
+}
+
+/* .notif-icon:nth-child(1) {
+  color: transparent;
+} */
+
+.hide-notif-icon {
+  color: transparent !important;
+}
+
+.nm-card__content span {
+  font-size: 0.8rem;
+  color: var(--grayish-blue);
+  text-align: left;
+  font-weight: 500;
+}
+
+.nm-cc__message {
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 2px var(--light-grayish-blue-1) solid;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: var(--mb-0-5);
+}
+
+.nm-cc__message:hover {
+  background-color: var(--light-grayish-blue-1);
+}
+
+.nm-cc__message p {
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+  text-align: left;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.show-message {
+  display: none;
+}
+
+.nmcc-img {
+  position: absolute;
+  right: var(--mb-1);
+  top: 1rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  /* border: 1px yellow solid; */
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    height: auto;
+  }
+
+  .notifications {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .nm-card:nth-child(5) .nm-card__content p {
+    width: 80%;
+  }
 }
