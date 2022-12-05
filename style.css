@@ -159,11 +159,11 @@ main {
   align-items: center;
   overflow: hidden;
   background-color: var(--very-light-grayish-blue);
-  padding: var(--mb-1-5) 0;
+  padding: var(--mb-1) 0;
 }
 
 .notifications {
-  width: 42%;
+  width: 42.5%;
   height: auto;
   display: flex;
   justify-content: flex-start;
